@@ -1,6 +1,6 @@
 # Coding Challenge
 
-A simple searchable table of products that can be viewed in a web page or accessed via API.
+A simple, searchable table of products that can be viewed in a web page or accessed via API.
 
 ## Getting Started
 
@@ -8,25 +8,27 @@ Clone or otherwise download the project from github.
 
 ### Prerequisites
 
-* MariaDB or Mysql installed and admin access. I used MariaDB.
-* A database management tool for the DB type you choose that can import CSV's. Most can, I used MySQL Workbench.
-* A java IDE to run the application from, I used Intellij.
+* MariaDB or Mysql installed with admin access. I used MariaDB.
+* A database management tool for the DB type you choose that can import CSV's. I used MySQL Workbench.
+* A java IDE to run the application. I used Intellij.
   *  Note: If you would rather deploy the WAR file, and know what you are doing, its located in the target directory.
 
 ### Installing
 
 1. Load the project into your IDE. Import it as a Maven project or equivalent for your IDE.
 2. Edit the application.properties file with your own connection string and credentials.
-3. Run the application, main method is in DemoApplication.java class. This will create a database called demo and a 
+3. Run the application. Main method is in DemoApplication.java class. 
+   * This will create a database called demo and a 
 table called product.
-4. Import the contents of the Products.csv file into the demo.product table using whatever method you choose.
+4. Import the contents of the demo\src\main\resources\Products.csv file into the demo.product table using whatever 
+method you choose.
 
 The data should now be accessible via the web browser or via a REST call.
 
 ### View
 
-I used the default address of localhost:8080 for the view. If everything went right and you don't have anything else 
-running there that should show a table with the products and a search field.
+I used the default address of localhost:8080 for the view. If everything went right, and you don't have anything else 
+running there, that should show a table with the products and a search field.
 
 The search will look for a partial match on any data in any column, so be specific if you want to see a smaller subset
 i.e. if you search for "1" you are going to get matches on last solds, shelf lifes, xFors, and costs.
@@ -35,7 +37,7 @@ i.e. if you search for "1" you are going to get matches on last solds, shelf lif
 
 http://localhost:8080/api will return all products in a json format.
 
-http://localhost:8080/api/getProductsByCriteria?criteria="some_criteria_you_want_to_search_by" will do the same thing as 
+http://localhost:8080/api/getProductsByCriteria?criteria=some_criteria_you_want_to_search_by will do the same thing as 
 the search box.
 
 #### Notes and Questions
