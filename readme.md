@@ -61,7 +61,5 @@ attributions, license info, etc. I'm making some assumptions about the app consu
 
 * Auto generated java docs can be found in the docs folder.
 
-* Normally the target dir is ignored when uploading to github. But importing the project seemed to require the war. 
+* Normally the target dir is ignored when uploading to github but, importing the project seemed to require the war. 
 What is the best practice here?
-
-
