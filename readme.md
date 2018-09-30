@@ -15,7 +15,7 @@ Clone or otherwise download the project from github.
 
 ### Installing
 
-1. Load the project into your IDE.
+1. Load the project into your IDE. Import it as a Maven project or equivalent for your IDE.
 2. Edit the application.properties file with your own connection string and credentials.
 3. Run the application, main method is in DemoApplication.java class. This will create a database called demo and a 
 table called product.
