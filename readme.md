@@ -34,7 +34,8 @@ i.e. if you search for "1" you are going to get matches on last solds, shelf lif
 ### API Calls
 
 http://localhost:8080/api will return all products in a json format.
-http://localhost:8080/api/getProductsByCriteria?criteria=<some criteria you want to search by> will do the same thing as 
+
+http://localhost:8080/api/getProductsByCriteria?criteria="some criteria you want to search by" will do the same thing as 
 the search box.
 
 #### Notes and Questions
