@@ -30,18 +30,18 @@ public class ProductService {
         //this part could be condensed into a something more efficient
         //but, this data set is tiny so I'll opt for more easily readable
         //filter for a partial match of the criteria, case independent on appropriate fields(I'm just guessing case should not matter here)
-        results.addAll(productList.stream().filter(x -> x.getDescription().toLowerCase().contains(criteria.toLowerCase())).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getDepartment().toLowerCase().contains(criteria.toLowerCase())).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getCost().contains(criteria)).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getLastSold().contains(criteria)).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getPrice().contains(criteria)).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getShelfLife().toLowerCase().contains(criteria.toLowerCase())).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getUnit().toLowerCase().contains(criteria.toLowerCase())).collect(Collectors.toList()));
-        results.addAll(productList.stream().filter(x -> x.getxFor().contains(criteria)).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getDescription().toLowerCase().contains(criteria.trim().toLowerCase())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getDepartment().toLowerCase().contains(criteria.trim().toLowerCase())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getCost().contains(criteria.trim())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getLastSold().contains(criteria.trim())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getPrice().contains(criteria.trim())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getShelfLife().toLowerCase().contains(criteria.trim().toLowerCase())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getUnit().toLowerCase().contains(criteria.trim().toLowerCase())).collect(Collectors.toList()));
+        results.addAll(productList.stream().filter(x -> x.getxFor().contains(criteria.trim())).collect(Collectors.toList()));
 
         //I think ID's should probably be an exact match, if thats not the case you could parseint the getid, then check if it contains the criteria
         try {
-            results.addAll(productList.stream().filter(x -> x.getId() == Integer.parseInt(criteria)).collect(Collectors.toList()));
+            results.addAll(productList.stream().filter(x -> x.getId() == Integer.parseInt(criteria.trim())).collect(Collectors.toList()));
         } catch (NumberFormatException nfe) {
             //ignore, not a number
         }

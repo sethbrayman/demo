@@ -10,8 +10,7 @@ Clone or otherwise download the project from github.
 
 * MariaDB or Mysql installed and admin access. I used MariaDB.
 * A database management tool for the DB type you choose that can import CSV's. Most can, I used MySQL Workbench.
-* A java IDE to run the application from, I used Intellij. 
-  * Note: If you would rather deploy the WAR file, and know what you are doing, its located in the target directory.
+* A java IDE to run the application from, I used Intellij.
 
 ### Installing
 
