@@ -1,0 +1,6 @@
+com.example.demo
+com.example.demo.Controllers
+com.example.demo.Controllers.API
+com.example.demo.Models
+com.example.demo.Repositories
+com.example.demo.Services
